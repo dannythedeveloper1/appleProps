@@ -1,34 +1,8 @@
 import React from "react";
-import $ from "jquery";
+import "./footerCollapes";
 import flag from "../images/icons/16.png";
 
 function Footer() {
-	$(document).on("click", ".footer-links-wrapper h3", function () {
-		console.log("hello")
-		if ($(window).width() <= 768) {
-			// $(this).next("ul").slideToggle();
-			$(this).toggleClass("expanded");
-			$(this).next().slideToggle();
-		} else {
-			$(this).next('ul').show();
-		}
-	});
-
-	// let els = $(".footer-links-wrapper h3");
-	// els.each((index, value) => {
-	// 	console.log(index, value);
-	// 	$(value).on("click", () => {
-	// 		if ($(window).width() <= 768) {
-	// 			// console.log($(els.next('ul')[index]))
-	// 			$(els.next('ul')[index]).slideToggle()
-	// 			$(value).toggleClass("expanded");
-	// 		}
-	// 	})
-	// });
-
-	$(window).on("resize", () => {
-		window.location.reload();
-	});
 	return (
 		<footer className="footer-wrapper">
 			<div className="container">
